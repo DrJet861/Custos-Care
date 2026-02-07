@@ -1,0 +1,726 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>CUSTOS – Fahrzeugbetreuung im Abo</title>
+  <meta name="description" content="CUSTOS ist persönliche Fahrzeugbetreuung im Abo. Planung, Organisation, Pflege und Kontrolle – ein Ansprechpartner, klare Abläufe, diskret." />
+
+  <style>
+    :root{
+      --bg: #F5F4F2;          /* Off-White */
+      --text: #1E1E1E;        /* Anthrazit */
+      --muted: #7A7A7A;       /* Warmes Grau */
+      --bronze: #8C6A43;      /* Bronze */
+      --card: rgba(255,255,255,.55);
+      --border: rgba(30,30,30,.12);
+      --shadow: 0 10px 30px rgba(0,0,0,.08);
+      --radius: 18px;
+      --max: 1120px;
+    }
+
+    *{ box-sizing: border-box; }
+    html,body{ height: 100%; }
+    body{
+      margin: 0;
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
+      color: var(--text);
+      background: var(--bg);
+      line-height: 1.55;
+      letter-spacing: .2px;
+    }
+
+    a{ color: inherit; text-decoration: none; }
+    a:hover{ text-decoration: underline; text-underline-offset: 4px; }
+
+    .container{
+      width: min(var(--max), calc(100% - 48px));
+      margin: 0 auto;
+    }
+
+    /* Header */
+    header{
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      backdrop-filter: blur(10px);
+      background: color-mix(in srgb, var(--bg) 86%, transparent);
+      border-bottom: 1px solid rgba(30,30,30,.08);
+    }
+    .nav{
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 14px 0;
+      gap: 16px;
+    }
+    .brand{
+      display: flex;
+      align-items: baseline;
+      gap: 10px;
+    }
+    .brand .name{
+      font-family: ui-serif, Georgia, "Times New Roman", Times, serif;
+      font-weight: 600;
+      letter-spacing: 1.2px;
+      font-size: 18px;
+    }
+    .brand .tag{
+      font-size: 12px;
+      color: var(--muted);
+    }
+    .navlinks{
+      display: flex;
+      gap: 14px;
+      align-items: center;
+      font-size: 14px;
+      color: var(--muted);
+    }
+
+    /* Buttons */
+    .btn{
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      padding: 12px 16px;
+      border-radius: 999px;
+      border: 1px solid var(--bronze);
+      color: var(--text);
+      background: transparent;
+      cursor: pointer;
+      font-weight: 600;
+      font-size: 14px;
+      transition: .18s ease;
+      white-space: nowrap;
+    }
+    .btn:hover{
+      background: var(--bronze);
+      color: var(--bg);
+      text-decoration: none;
+    }
+    .btn.secondary{
+      border-color: rgba(30,30,30,.18);
+      color: var(--text);
+    }
+    .btn.secondary:hover{
+      background: rgba(30,30,30,.06);
+      color: var(--text);
+    }
+
+    /* Sections */
+    section{ padding: 80px 0; }
+    .section-title{
+      font-family: ui-serif, Georgia, "Times New Roman", Times, serif;
+      font-weight: 600;
+      letter-spacing: .2px;
+      font-size: 30px;
+      margin: 0 0 14px;
+    }
+    .section-lead{
+      color: var(--muted);
+      margin: 0 0 18px;
+      max-width: 62ch;
+    }
+    .rule{
+      height: 1px;
+      background: color-mix(in srgb, var(--bronze) 42%, transparent);
+      margin: 22px 0 0;
+    }
+
+    /* Hero */
+    .hero{
+      padding: 72px 0 60px;
+    }
+    .hero-grid{
+      display: grid;
+      grid-template-columns: 1.15fr .85fr;
+      gap: 28px;
+      align-items: stretch;
+    }
+    .hero-copy{
+      padding: 8px 0;
+    }
+    .hero h1{
+      font-family: ui-serif, Georgia, "Times New Roman", Times, serif;
+      font-weight: 600;
+      letter-spacing: .2px;
+      line-height: 1.08;
+      margin: 0 0 16px;
+      font-size: clamp(40px, 4.2vw, 64px);
+    }
+    .hero p{
+      margin: 0 0 22px;
+      color: var(--muted);
+      max-width: 58ch;
+      font-size: 16px;
+    }
+    .hero-ctas{
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+    .hero-card{
+      border: 1px solid rgba(30,30,30,.12);
+      border-radius: var(--radius);
+      overflow: hidden;
+      box-shadow: var(--shadow);
+      background: #ffffff;
+      min-height: 320px;
+      position: relative;
+    }
+    .hero-card .img{
+      width: 100%;
+      height: 100%;
+      background:
+        linear-gradient(135deg, rgba(0,0,0,.15), rgba(0,0,0,.02)),
+        url("https://images.unsplash.com/photo-1525609004556-c46c7d6cf023?auto=format&fit=crop&w=1400&q=70");
+      background-size: cover;
+      background-position: center;
+      filter: saturate(.95) contrast(.98);
+    }
+    .hero-card .badge{
+      position: absolute;
+      left: 18px;
+      bottom: 18px;
+      padding: 10px 12px;
+      border-radius: 999px;
+      background: rgba(245,244,242,.86);
+      border: 1px solid rgba(30,30,30,.12);
+      font-size: 12px;
+      color: var(--text);
+      display: inline-flex;
+      gap: 10px;
+      align-items: center;
+    }
+    .dot{
+      width: 8px; height: 8px;
+      border-radius: 999px;
+      background: var(--bronze);
+      display: inline-block;
+    }
+
+    /* Two column blocks */
+    .two{
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 26px;
+      align-items: center;
+    }
+    .card{
+      border: 1px solid rgba(30,30,30,.12);
+      border-radius: var(--radius);
+      background: var(--card);
+      box-shadow: var(--shadow);
+      overflow: hidden;
+    }
+    .media{
+      min-height: 320px;
+      background-size: cover;
+      background-position: center;
+      filter: saturate(.95) contrast(.98);
+    }
+    .media.problem{
+      background-image:
+        linear-gradient(135deg, rgba(0,0,0,.10), rgba(0,0,0,.02)),
+        url("https://images.unsplash.com/photo-1517524008697-84bbe3c3fd98?auto=format&fit=crop&w=1400&q=70");
+    }
+    .media.about{
+      background-image:
+        linear-gradient(135deg, rgba(0,0,0,.10), rgba(0,0,0,.02)),
+        url("https://images.unsplash.com/photo-1529590003495-b2646e2718bf?auto=format&fit=crop&w=1400&q=70");
+    }
+
+    ul.clean{
+      margin: 18px 0 0;
+      padding-left: 18px;
+      color: var(--text);
+    }
+    ul.clean li{
+      margin: 10px 0;
+      color: var(--text);
+    }
+    .muted{ color: var(--muted); }
+
+    /* Steps */
+    .steps{
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 14px;
+      margin-top: 18px;
+    }
+    .step{
+      border: 1px solid rgba(30,30,30,.12);
+      border-radius: var(--radius);
+      background: rgba(255,255,255,.5);
+      padding: 18px;
+    }
+    .step .n{
+      color: var(--bronze);
+      font-weight: 700;
+      font-size: 12px;
+      letter-spacing: 2px;
+    }
+    .step h3{
+      margin: 10px 0 8px;
+      font-size: 16px;
+    }
+    .step p{
+      margin: 0;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    /* Pricing */
+    .pricing{
+      display: grid;
+      grid-template-columns: 1.1fr .9fr;
+      gap: 20px;
+      align-items: stretch;
+      margin-top: 18px;
+    }
+    .pricebox{
+      border: 1px solid rgba(30,30,30,.12);
+      border-radius: var(--radius);
+      background: rgba(255,255,255,.6);
+      box-shadow: var(--shadow);
+      padding: 26px;
+    }
+    .pricebox .label{
+      color: var(--bronze);
+      font-weight: 700;
+      letter-spacing: 2px;
+      font-size: 12px;
+    }
+    .price{
+      display: flex;
+      align-items: baseline;
+      gap: 10px;
+      margin: 10px 0 10px;
+      flex-wrap: wrap;
+    }
+    .price .amount{
+      font-family: ui-serif, Georgia, "Times New Roman", Times, serif;
+      font-size: 44px;
+      line-height: 1;
+      font-weight: 600;
+    }
+    .price .per{
+      color: var(--muted);
+      font-size: 14px;
+    }
+    .fine{
+      color: var(--muted);
+      font-size: 13px;
+      margin-top: 14px;
+    }
+
+    .models{
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 14px;
+      margin-top: 18px;
+    }
+    .model{
+      border: 1px solid rgba(30,30,30,.12);
+      border-radius: var(--radius);
+      background: rgba(255,255,255,.5);
+      padding: 18px;
+    }
+    .model h3{
+      margin: 0 0 8px;
+      font-size: 16px;
+    }
+    .model p{
+      margin: 0;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    /* Quote-ish trust block */
+    .trust{
+      border: 1px solid rgba(30,30,30,.12);
+      border-radius: var(--radius);
+      background: rgba(255,255,255,.55);
+      padding: 22px;
+      box-shadow: var(--shadow);
+      margin-top: 18px;
+    }
+    .trust p{
+      margin: 0;
+      color: var(--text);
+      font-size: 15px;
+    }
+    .trust .small{
+      margin-top: 10px;
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    /* Contact */
+    .contact{
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 18px;
+      align-items: start;
+      margin-top: 18px;
+    }
+    .contact .box{
+      border: 1px solid rgba(30,30,30,.12);
+      border-radius: var(--radius);
+      background: rgba(255,255,255,.55);
+      padding: 20px;
+      box-shadow: var(--shadow);
+    }
+    .contact .box h3{
+      margin: 0 0 8px;
+      font-size: 16px;
+    }
+    .contact .box p{
+      margin: 0 0 12px;
+      color: var(--muted);
+      font-size: 14px;
+    }
+    .contact .line{
+      display: flex;
+      gap: 10px;
+      align-items: center;
+      font-size: 14px;
+      padding: 8px 0;
+      border-top: 1px solid rgba(30,30,30,.10);
+    }
+    .contact .line:first-of-type{ border-top: 0; padding-top: 0; }
+
+    footer{
+      padding: 30px 0 50px;
+      color: var(--muted);
+      font-size: 13px;
+    }
+    .footer-row{
+      display: flex;
+      justify-content: space-between;
+      gap: 14px;
+      flex-wrap: wrap;
+      border-top: 1px solid rgba(30,30,30,.08);
+      padding-top: 18px;
+    }
+    .footer-row a{ color: var(--muted); }
+
+    /* Responsive base (wir finalisieren Mobile danach) */
+    @media (max-width: 920px){
+      .hero-grid{ grid-template-columns: 1fr; }
+      .two{ grid-template-columns: 1fr; }
+      .pricing{ grid-template-columns: 1fr; }
+      .steps{ grid-template-columns: 1fr; }
+      .models{ grid-template-columns: 1fr; }
+      .contact{ grid-template-columns: 1fr; }
+      section{ padding: 64px 0; }
+      .hero{ padding: 56px 0 40px; }
+    }
+  </style>
+</head>
+
+<body>
+<header>
+  <div class="container">
+    <div class="nav">
+      <div class="brand">
+        <div class="name">CUSTOS</div>
+        <div class="tag">Fahrzeugbetreuung im Abo</div>
+      </div>
+      <nav class="navlinks">
+        <a href="#leistung">Leistung</a>
+        <a href="#abo">Abo</a>
+        <a href="#ueber">Über</a>
+        <a href="#kontakt" class="btn">Kontakt</a>
+      </nav>
+    </div>
+  </div>
+</header>
+
+<main>
+  <!-- HERO -->
+  <section class="hero">
+    <div class="container">
+      <div class="hero-grid">
+        <div class="hero-copy">
+          <h1>Fahrzeugbesitz.<br/>Ohne Aufwand.</h1>
+          <p>
+            CUSTOS ist persönliche Fahrzeugbetreuung im Abo.
+		Wir planen, koordinieren, pflegen und kontrollieren, damit dein Fahrzeug 		jederzeit bereit ist.
+            Ein Ansprechpartner. Ein Abo. Ruhig geregelt.
+          </p>
+          <div class="hero-ctas">
+            <a class="btn" href="#kontakt">Unverbindlich anfragen</a>
+            <a class="btn secondary" href="#abo">Abo ansehen</a>
+          </div>
+          <div class="rule"></div>
+        </div>
+
+        <div class="hero-card" aria-label="Hero Bild">
+          <div class="img"></div>
+          <div class="badge"><span class="dot"></span> Exclusiv. Persönlich. Diskret.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROBLEM -->
+  <section id="problem">
+    <div class="container">
+      <div class="two">
+        <div>
+          <h2 class="section-title">Warum Autos Zeit kosten</h2>
+          <p class="section-lead">
+            Service, MFK, Reifen, Termine, Abstimmungen. Nicht schwierig, aber ständig präsent.
+            CUSTOS nimmt dir diese Verantwortung ab. Du wirst informiert, nicht beschäftigt.
+          </p>
+          <div class="rule"></div>
+        </div>
+        <div class="card">
+          <div class="media problem" role="img" aria-label="Ruhiges Bild, Platzhalter"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- LEISTUNG -->
+  <section id="leistung">
+    <div class="container">
+      <div class="two">
+        <div>
+          <h2 class="section-title">Was wir übernehmen</h2>
+          <p class="section-lead">
+            CUSTOS ist deine zentrale Anlaufstelle für alles rund ums Fahrzeug. Klar, ruhig, verlässlich.
+          </p>
+
+          <ul class="clean">
+            <li>Planung von Service, MFK und Reifen</li>
+            <li>Koordination mit Werkstätten und Partnern</li>
+            <li>Kontrolle vor und nach jedem Termin</li>
+            <li>Regelmässige Pflege des Fahrzeugs</li>
+            <li>Einschätzung und Umsetzung von Änderungen</li>
+            <li>Sicherstellen, dass dein Auto jederzeit bereit ist</li>
+          </ul>
+
+          <p class="muted" style="margin-top:16px;">
+            Alles läuft über eine Person. Ohne Umwege. Ohne Nachfragen.
+		Ein Ansprechpartner. Ein Ablauf. Ruhe
+          </p>
+          <div class="rule"></div>
+        </div>
+
+        <div class="card">
+          <div class="media about" role="img" aria-label="Detailbild, Platzhalter"></div>
+        </div>
+      </div>
+
+      <div style="margin-top:26px;">
+        <h2 class="section-title" style="font-size:26px; margin-bottom:10px;">So einfach ist es</h2>
+        <p class="section-lead">Ein klarer Ablauf. Kein Hin und Her.</p>
+
+        <div class="steps">
+          <div class="step">
+            <div class="n">01</div>
+            <h3>Kurzes Gespräch</h3>
+            <p>Wir klären Bedarf, Fahrzeuge und Rahmen.</p>
+          </div>
+          <div class="step">
+            <div class="n">02</div>
+            <h3>Betreuung startet</h3>
+            <p>Planung, Organisation und Pflege laufen über CUSTOS.</p>
+          </div>
+          <div class="step">
+            <div class="n">03</div>
+            <h3>Du fährst</h3>
+	    <p>Du steigst ein und fährst!</p>
+            <p>Du wirst informiert, nicht beschäftigt.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABO -->
+  <section id="abo">
+    <div class="container">
+      <h2 class="section-title">Das Abo</h2>
+      <p class="section-lead">
+        Ein fixer Rahmen. Klare Abläufe. Externe Kosten transparent separat.
+      </p>
+
+      <div class="pricing">
+        <div class="pricebox">
+          <div class="label">CUSTOS CARE</div>
+          <div class="price">
+            <div class="amount">CHF 279</div>
+            <div class="per">pro Monat, Laufzeit 12 Monate</div>
+          </div>
+
+          <ul class="clean">
+            <li>Betreuung eines Fahrzeugs</li>
+            <li>Zentrale Verantwortung für alle Autothemen</li>
+            <li>Planung und Koordination aller Termine</li>
+            <li>1 Pflege pro Monat</li>
+            <li>Laufende Zustandskontrolle</li>
+            <li>2 Einsätze pro Monat</li>
+          </ul>
+
+          <div class="fine">
+            Zahlung monatlich oder jährlich. Externe Kosten (Werkstatt, Teile, Gebühren) werden separat weitergegeben.
+          </div>
+
+          <div style="margin-top:18px; display:flex; gap:12px; flex-wrap:wrap;">
+            <a class="btn" href="#kontakt">Care anfragen</a>
+            <a class="btn secondary" href="#modelle">Modelle ansehen</a>
+          </div>
+        </div>
+
+        <div class="pricebox" style="background: rgba(255,255,255,.45);">
+          <div class="label">Klar geregelt</div>
+          <p class="section-lead" style="margin-top:10px;">
+            CUSTOS arbeitet vorausschauend. Themen werden geplant, bevor sie dringend werden.
+            Entscheidungen erfolgen im vereinbarten Rahmen. Bei Abweichungen gibt es eine kurze Freigabe.
+          </p>
+
+          <div class="trust" style="margin-top:14px;">
+            <p>
+              Begrenzte Fahrzeuge in betreung, klare Abläufe, ein Ansprechpartner.
+              Qualität braucht Ruhe.
+            </p>
+            <div class="small">Diskretion ist Teil des Konzepts. Öffentliche Referenzen veröffentlichen wir nicht.</div>
+          </div>
+        </div>
+      </div>
+
+      <div id="modelle" style="margin-top:28px;">
+        <h2 class="section-title" style="font-size:26px; margin-bottom:10px;">Erweiterte Betreuung</h2>
+        <p class="section-lead">Mehr Präsenz, gleicher Anspruch. Details im Gespräch.</p>
+
+        <div class="models">
+          <div class="model">
+            <h3>CUSTOS Plus</h3>
+            <p>Mehr Präsenz und Pflege. Zweitfahrzeug inklusive als Plus.</p>
+          </div>
+          <div class="model">
+            <h3>CUSTOS Pro</h3>
+            <p>Wöchentliche Pflege und höherer Rahmen. Für regelmässige Nutzung.</p>
+          </div>
+          <div class="model">
+            <h3>CUSTOS Elite</h3>
+            <p>Individuelle Betreuung für mehrere Fahrzeuge. Begrenzte Plätze.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ÜBER -->
+  <section id="ueber">
+    <div class="container">
+      <div class="two">
+        <div>
+         <h2 class="section-title">Für wen CUSTOS passt</h2>
+          <p class="section-lead">
+         
+          </p>
+          <p class="section-lead">
+         CUSTOS ist für Menschen mit wenig Zeit und hohem Anspruch.
+Für ein oder mehrere Fahrzeuge. Für alle, die keine Lust auf Organisation haben.
+
+Die Betreuung ist bewusst begrenzt.
+          </p>
+
+
+	<h2 class="section-title">Über CUSTOS</h2>
+          <p class="section-lead">
+            CUSTOS ist persönliche Fahrzeugbetreuung im Abo.
+            Wir übernehmen Planung, Organisation, Pflege und Kontrolle, damit das Fahrzeug jederzeit bereit ist.
+          </p>
+          <p class="section-lead">
+            Die Betreuung erfolgt bewusst begrenzt. Wenige Fahrzeuge, klare Abläufe, ein Ansprechpartner.
+            CUSTOS ist keine Werkstatt und kein Vermittler. Wir koordinieren, steuern und kontrollieren, im Interesse des Kunden.
+          </p>
+
+          <h3 style="margin: 18px 0 8px; font-size:16px;">So arbeiten wir</h3>
+          <p class="muted" style="margin:0;">
+            Vorausschauend und ruhig. Du bekommst Ergebnisse, keine Aufgaben.
+            Sobald Kosten oder Umfang abweichen, gibt es eine kurze Freigabe. Alles andere erledigen wir.
+         
+CUSTOS arbeitet vorausschauend. Themen werden geplant, bevor sie dringend werden.
+Du bekommst Ergebnisse, keine Aufgaben.
+
+Entscheidungen erfolgen im vereinbarten Rahmen.
+Sobald Kosten oder Umfang abweichen, erfolgt eine kurze Freigabe.
+</p>
+          <div class="rule"></div>
+        </div>
+
+        <div class="card">
+          <div class="media about" role="img" aria-label="Ruhiges Detailbild, Platzhalter"></div>
+        </div>
+      </div>
+
+      <div style="margin-top:26px;">
+        <h2 class="section-title" style="font-size:26px; margin-bottom:10px;">Vertrauen und Diskretion</h2>
+        <div class="trust">
+          <p>
+            CUSTOS arbeitet ohne Show, ohne öffentliche Kundenlisten und ohne Vermarktung von Fahrzeugen.
+            Empfehlungen erfolgen persönlich. Diskretion ist Teil des Konzepts.
+          </p>
+          <div class="small">
+            Wenn du willst, sprechen wir kurz und klären, ob CUSTOS zu dir passt.
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- KONTAKT -->
+  <section id="kontakt">
+    <div class="container">
+      <h2 class="section-title">Kontakt</h2>
+      <p class="section-lead">
+        Ein kurzes Gespräch reicht, um Bedarf und Rahmen zu klären. Unverbindlich und diskret.
+      </p>
+
+      <div class="contact">
+        <div class="box">
+          <h3>Unverbindlich anfragen</h3>
+          <p>Schreib kurz, um welches Fahrzeug es geht und ob es ein Zweitfahrzeug gibt.</p>
+          <a class="btn" href="mailto:kontakt@custos.ch">E-Mail senden</a>
+          <div class="fine">Platzhalter: kontakt@custos.ch</div>
+        </div>
+
+        <div class="box">
+          <h3>Direkter Kontakt</h3>
+          <p>Für kurze Abklärungen reicht eine Nachricht.</p>
+
+          <div class="line"><span class="dot"></span> WhatsApp: +41 XX XXX XX XX</div>
+          <div class="line"><span class="dot"></span> Telefon: +41 XX XXX XX XX</div>
+          <div class="line"><span class="dot"></span> Region: Zürich und Umgebung</div>
+
+          <div class="fine">Platzhalter: Nummern und Region kannst du später anpassen.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="container">
+    <div class="footer-row">
+      <div>© <span id="y"></span> CUSTOS</div>
+      <div style="display:flex; gap:14px; flex-wrap:wrap;">
+        <a href="#">Impressum</a>
+        <a href="#">Datenschutz</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+  document.getElementById("y").textContent = new Date().getFullYear();
+</script>
+</body>
+</html>
