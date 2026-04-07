@@ -1,4 +1,4 @@
-:root  {
+:root {
     --bg: #F5F4F2; /* Off-White */
     --text: #1E1E1E; /* Anthrazit */
     --muted: #7A7A7A; /* Warmes Grau */
@@ -306,7 +306,7 @@ ul {
     .hero-card .img {
         width: 100%;
         height: 100%;
-        background: linear-gradient(135deg, rgba(0,0,0,.15), rgba(0,0,0,.02)), url("https://images.unsplash.com/photo-1525609004556-c46c7d6cf023?auto=format&fit=crop&w=1400&q=70");
+        background: linear-gradient(135deg, rgba(0,0,0,.15), rgba(0,0,0,.02)), url("Media/911_heck.jpeg");
         background-size: cover;
         background-position: center;
         filter: saturate(.95) contrast(.98);
@@ -359,12 +359,30 @@ ul {
 }
 
     .media.problem {
-        background-image: linear-gradient(135deg, rgba(0,0,0,.10), rgba(0,0,0,.02)), url("https://images.unsplash.com/photo-1517524008697-84bbe3c3fd98?auto=format&fit=crop&w=1400&q=70");
+        background-image: linear-gradient(135deg, rgba(0,0,0,.10), rgba(0,0,0,.02)), url("media/benz.jpg");
     }
 
     .media.about {
-        background-image: linear-gradient(135deg, rgba(0,0,0,.10), rgba(0,0,0,.02)), url("https://images.unsplash.com/photo-1529590003495-b2646e2718bf?auto=format&fit=crop&w=1400&q=70");
+        background-image: linear-gradient(135deg, rgba(0,0,0,.10), rgba(0,0,0,.02)), url("media/911ff2.jpg");
     }
+
+    .media.uber {
+        background-image: linear-gradient(135deg, rgba(0,0,0,.10), rgba(0,0,0,.02)), url("media/ff.jpg");
+
+    }
+
+    .media.logo {
+        background-image: linear-gradient(135deg, rgba(0,0,0,.10), rgba(0,0,0,.02)), url("media/911in.jpg");
+    }
+
+    .media.logo2 {
+        background-image: linear-gradient(135deg, rgba(0,0,0,.10), rgba(0,0,0,.02)), url("media/ffin.jpg");
+    }
+
+    .media.cus {
+        background-image: linear-gradient(135deg, rgba(0,0,0,.10), rgba(0,0,0,.02)), url("media/benz3.jpg");
+    }
+
 
 ul.clean {
     margin: 18px 0 0;
