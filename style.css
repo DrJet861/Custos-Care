@@ -359,7 +359,7 @@ ul {
 }
 
     .media.problem {
-        background-image: linear-gradient(135deg, rgba(0,0,0,.10), rgba(0,0,0,.02)), url("Media/benz.JPG");
+        background-image: linear-gradient(135deg, rgba(0,0,0,.10), rgba(0,0,0,.02)), url("Media/911in.JPG");
     }
 
     .media.about {
@@ -380,7 +380,7 @@ ul {
     }
 
     .media.cus {
-        background-image: linear-gradient(135deg, rgba(0,0,0,.10), rgba(0,0,0,.02)), url("Media/benz3.JPG");
+        background-image: linear-gradient(135deg, rgba(0,0,0,.10), rgba(0,0,0,.02)), url("Media/benz2.JPG");
     }
 
 
