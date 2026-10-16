@@ -1,0 +1,49 @@
+CUSTOS V16.2 – UPLOAD MIT IPHONE / GITHUB PAGES
+================================================
+
+WICHTIG: VOR DEM HOCHLADEN
+1. Ersetze in impressum.html und datenschutz.html die GROSSGESCHRIEBENEN
+   Platzhalter durch den tatsächlichen, amtlich korrekten Betreiber.
+2. Die bisherigen Dateien bleiben als Sicherung im GitHub-Verlauf.
+3. Die existierende CNAME-Datei im Repository NICHT löschen oder überschreiben.
+
+GITHUB-STRUKTUR (main / root):
+  index.html, betreuung.html, mitgliedschaften.html, protection.html,
+  ueber-custos.html, kontakt.html, impressum.html, datenschutz.html
+  css/ (alle enthaltenen Dateien)
+  js/ (alle enthaltenen Dateien)
+  CNAME (bestehend bei GitHub belassen)
+
+Safari: https://github.com/DrJet861/Custos-Care
+> Add file > Upload files > HTML-Dateien ins Hauptverzeichnis
+> Im Ordner css/ die CSS-Dateien hochladen
+> Im Ordner js/ die JS-Dateien hochladen
+> Commit changes. Auf iPhone muss das ZIP in der Dateien-App entpackt sein.
+Die Ordner NICHT als Unterordner CUSTOS anlegen.
+
+Hinweise zu den Kontaktformularen:
+- FormSubmit: https://formsubmit.co/info@custos-care.ch
+- Eine erste echte Testanfrage startet die Aktivierung per E-Mail.
+- Aktivierungslink in info@custos-care.ch anklicken.
+- Danach E-Mail- und Dateianhangempfang testen.
+- Die Erfolgsmeldung beim Absenden stammt von FormSubmit, nicht von CUSTOS.
+- Ohne FormSubmit-Aktivierung kann der Versand nicht als bestätigt gelten.
+- Kein Passwort und keinen Token in den Website-Code eintragen.
+- Bildgrösse: bis zu fünf Dateien, insgesamt max. 10 MB.
+
+Die Webanalyse ist in V16.2 noch nicht aktiv.
+
+WICHTIG ZUR DATEI CNAME:
+Das Upload-Paket enthält absichtlich KEINE neue CNAME-Datei. Die bereits
+vorhandene Datei im Repository bleibt unberührt. NICHT löschen.
+
+WICHTIG ZUM FORMULAR:
+FormSubmit hat eine Aktivierung per E-Mail. Wir haben nur die lokale
+Funktionalität geprüft, NICHT die tatsächliche Zustellung bei Infomaniak.
+Teste nach dem Upload zuerst selbst und bestätige die Aktivierungsmail.
+Beim Foto-Upload stehen 5 einzelne Auswahlfelder bereit (bis 10 MB zusammen).
+
+VERÖFFENTLICHUNGSVORAUSSETZUNG:
+Die amtliche Firmenbezeichnung und der tatsächliche Inhaber stehen noch als
+PLATZHALTER im Impressum und Datenschutz. Beide Dateien vor der
+Veröffentlichung inhaltlich korrigieren; nicht mit Beispielidentität live stellen.
