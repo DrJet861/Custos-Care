@@ -279,3 +279,17 @@ main[id="main"]{scroll-margin-top:calc(var(--header) + 14px)}
 
 /* V16.2 narrow-screen legal text: allow long provider names / e-mail addresses to wrap. */
 .page-legal, .page-legal .content-frame, .page-legal-note, .page-legal-note p {min-width:0;max-width:100%;overflow-wrap:anywhere;word-break:normal}
+
+/* V16.2.1: pixel-consistent SVG arrows instead of OS-dependent Unicode emoji. */
+.custos-arrow-icon {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  vertical-align: -0.12em;
+  flex: none;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.65;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
