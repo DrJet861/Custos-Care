@@ -1,0 +1,76 @@
+/* CUSTOS Hybrid Luxury V15 / exclusively scoped to the about page. */
+.about-page .v15-hero .ab-hero-grid{grid-template-columns:minmax(0,1.06fr) minmax(0,.86fr);gap:clamp(36px,5.5vw,105px)}
+.about-page .v15-hero h1{font-size:clamp(47px,5vw,82px);max-width:850px;line-height:1.075;overflow-wrap:normal}
+.about-page .v15-hero .ab-hero-copy{min-width:0}
+.about-page .v15-hero-lead{color:#F1EFE9;font-weight:500;font-size:clamp(17px,1.6vw,22px);line-height:1.45;max-width:500px;margin:0 0 15px}
+.about-page .v15-hero-body{color:#BEC6C1;max-width:510px;font-size:13px;line-height:1.9;margin:0}
+.about-page .v15-hero-art{min-width:0}
+.about-page .v15-stage-brand span{font-size:clamp(23px,3vw,46px);letter-spacing:.18em;font-weight:500;line-height:1.5;white-space:nowrap}
+.about-page .v15-stage-brand small{display:block;letter-spacing:.25em;font-size:10px;font-weight:400;color:#B9B8AE}
+.about-page .v15-hero .ab-hero-foot a{color:#D6D4CC}
+.about-page .v15-idea .ab-statement-grid{grid-template-columns:minmax(0,1.03fr) minmax(0,.82fr);align-items:start;gap:clamp(45px,6vw,105px)}
+.about-page .v15-idea h2{font-size:clamp(48px,5.5vw,85px);line-height:1.09}
+.about-page .v15-idea-epigraph{font-size:clamp(19px,2vw,27px);letter-spacing:-.03em;line-height:1.45;font-weight:450;margin:36px 0 0;max-width:510px}
+.about-page .v15-story{max-width:535px}
+.about-page .v15-story p{font-size:14px;line-height:1.9;color:#4D5753;margin:0 0 20px}
+.about-page .v15-idea-quote{display:grid;grid-template-columns:72px 1fr;gap:20px;align-items:start;margin-top:66px;padding:41px 0 0;border-top:1px solid #C7C5BC}
+.about-page .v15-idea-quote>span{font-size:100px;color:#A79882;line-height:.85;font-family:Georgia,serif}
+.about-page .v15-idea-quote p{font-size:clamp(26px,3.2vw,49px);line-height:1.18;letter-spacing:-.045em;margin:0;color:#242D2B;font-weight:400}
+.about-page .v15-idea-quote strong{font-weight:500}
+.about-page .v15-idea-quote small{grid-column:2;letter-spacing:.12em;font-size:10px;color:#877C6D;margin-top:0}
+.about-page .v15-values .ab-values-heading{margin-bottom:23px;font-size:clamp(48px,5.1vw,78px)}
+.about-page .v15-values-lead{font-size:14px;line-height:1.85;color:#56625C;margin:0 0 60px;max-width:570px}
+.about-page .v15-values .ab-value{grid-template-columns:55px minmax(0,1fr) minmax(250px,.82fr);gap:clamp(17px,3vw,55px);padding:31px 0 39px;align-items:start}
+.about-page .v15-values .ab-value h3{font-size:clamp(28px,3.6vw,53px);overflow-wrap:anywhere}
+.about-page .v15-values .ab-value-content{padding-top:7px}
+.about-page .v15-values .ab-value-content p{color:#555F5A;font-size:14px;line-height:1.75;margin:0;max-width:450px}
+.about-page .v15-values .ab-value-tag{margin-top:17px}
+.about-page .v15-personal-grid{grid-template-columns:.96fr 1fr;gap:clamp(42px,6vw,95px)}
+.about-page .v15-personal .ab-personal-visual{display:flex;flex-direction:column;justify-content:center;min-height:630px;padding:85px clamp(22px,3vw,55px) 70px;background:radial-gradient(circle at 75% 5%,#475252 0%,#293334 48%,#20282A 100%)}
+.about-page .v15-scenario-card{border:1px solid rgba(227,222,211,.27);background:rgba(13,20,21,.17);padding:clamp(22px,3vw,42px);position:relative}
+.about-page .v15-scenario-marker{display:block;color:#C3B195;font-size:9px;letter-spacing:.15em;line-height:1.5}
+.about-page .v15-scenario-card blockquote{border:0;margin:32px 0;padding:0;font-size:clamp(22px,2.4vw,37px);line-height:1.37;letter-spacing:-.038em;color:#F5F2EC;font-weight:400}
+.about-page .v15-scenario-rule{width:38px;height:1px;background:#A79882;margin-bottom:24px}
+.about-page .v15-scenario-card p{font-size:13px;color:#BFC7C0;line-height:1.85;max-width:400px;margin:0}
+.about-page .v15-personal h2{font-size:clamp(40px,4.4vw,69px);line-height:1.1;overflow-wrap:normal}
+.about-page .v15-personal-lead{font-size:19px;line-height:1.5;font-weight:500;letter-spacing:-.025em;margin:0 0 18px;color:#ECEDE7}
+.about-page .v15-personal-text,.about-page .v15-personal-points p{font-size:13px;line-height:1.8;color:#C2C9C2;margin:0 0 17px}
+.about-page .v15-personal-points{border-top:1px solid rgba(240,242,237,.15);padding-top:23px;margin-top:23px}
+.about-page .v15-personal-points strong{color:#F6F2EA;font-weight:600}
+.about-page .v15-personal .ab-personal-footnote{margin-top:26px}
+.about-page .v15-brand .ab-brand-heading{gap:40px;align-items:end;margin-bottom:48px}
+.about-page .v15-brand .ab-brand-heading h2{font-size:clamp(45px,5.2vw,82px);line-height:1.06}
+.about-page .v15-brand-intro{font-size:14px;line-height:1.9;color:#58635C;max-width:620px;margin:25px 0 0}
+.about-page .v15-brand-note{font-size:10px;letter-spacing:.12em;color:#96846D;white-space:nowrap;padding-bottom:10px}
+.about-page .v15-brand-diagram .ab-brand-main>span{font-size:clamp(49px,7vw,109px)}
+.about-page .v15-brand-diagram .ab-brand-sub{min-height:365px;gap:16px;justify-content:flex-start}
+.about-page .v15-brand-diagram .ab-brand-sub strong{font-size:clamp(28px,2.85vw,43px);line-height:1.13;margin:13px 0 0;letter-spacing:-.05em}
+.about-page .v15-brand-diagram .ab-brand-sub p{font-size:13px;line-height:1.8;color:#5F6861;max-width:470px;margin:0}
+.about-page .v15-brand-diagram .ab-brand-sub-end{margin-top:auto}
+.about-page .v15-building{color:#90795E;font-size:9px;line-height:1.4;letter-spacing:.11em}
+.about-page .v15-brand-outro{font-size:15px;color:#5A645D;line-height:1.8;margin:29px 0 0}
+.about-page .v15-brand-outro strong{color:#222D2A;font-weight:600}
+.about-page .v15-discretion{background:#E9E6DF;padding:clamp(100px,10vw,160px) 0;color:#1D2523}
+.about-page .v15-discretion-head{display:grid;grid-template-columns:1.15fr .67fr;gap:clamp(40px,6vw,110px);align-items:end;margin:44px 0 65px}
+.about-page .v15-discretion h2{font-size:clamp(47px,5.4vw,83px);margin:0;line-height:1.07;letter-spacing:-.065em;font-weight:500}
+.about-page .v15-discretion h2 em{font-style:normal;color:#818C85;font-weight:300}
+.about-page .v15-discretion-head p{font-size:14px;line-height:1.82;margin:0 0 17px;color:#55625A}
+.about-page .v15-discretion-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));border-top:1px solid #BEC3BA}
+.about-page .v15-discretion-grid article{border-bottom:1px solid #BEC3BA;padding:36px 30px 36px 0;min-width:0}
+.about-page .v15-discretion-grid article:nth-child(even){padding-left:30px}
+.about-page .v15-discretion-grid article>span{font-size:10px;letter-spacing:.14em;color:#8E7C65}
+.about-page .v15-discretion-grid h3{font-weight:500;letter-spacing:-.04em;font-size:clamp(23px,2.6vw,35px);line-height:1.2;margin:18px 0}
+.about-page .v15-discretion-grid p{line-height:1.8;font-size:13px;max-width:510px;color:#5C6860;margin:0}
+.about-page .v15-discretion-end{font-size:clamp(14px,1.35vw,18px);line-height:1.5;letter-spacing:.05em;color:#8A765C;margin-top:37px}
+.about-page .v15-discretion-end strong{color:#29332F;font-weight:600}
+.about-page .v15-cta h2{font-size:clamp(45px,5.2vw,78px);line-height:1.08}
+.about-page .v15-cta-lead{font-size:20px;font-weight:500;color:#F5F2EC;line-height:1.4;letter-spacing:-.03em;margin:0 0 16px}
+.about-page .v15-cta-body{font-size:13px;line-height:1.88;color:#C6CDC6;margin:0 0 31px}
+.about-page .v15-cta-links{display:flex;gap:22px;margin-top:22px;flex-wrap:wrap}
+.about-page .v15-cta-links a{font-size:11px;color:#D5C3A9;border-bottom:1px solid rgba(213,195,169,.5);padding-bottom:6px}
+.about-page .v15-cta .ab-cta-right small{line-height:2}
+@media(max-width:1100px){.about-page .v15-hero h1{font-size:clamp(42px,5vw,70px)}.about-page .v15-personal-grid{gap:40px}.about-page .v15-personal h2{font-size:clamp(39px,5vw,58px)}.about-page .v15-values .ab-value{grid-template-columns:48px minmax(0,.9fr) minmax(0,.85fr)} }
+@media(max-width:920px){.about-page .v15-hero .ab-hero-grid{grid-template-columns:1fr;min-height:unset}.about-page .v15-hero h1{font-size:clamp(50px,7.4vw,78px)}.about-page .v15-idea .ab-statement-grid{grid-template-columns:1fr;gap:40px}.about-page .v15-story{max-width:690px}.about-page .v15-personal-grid{grid-template-columns:1fr;gap:65px}.about-page .v15-personal .ab-personal-visual{min-height:410px}.about-page .v15-discretion-head{grid-template-columns:1fr;gap:25px}.about-page .v15-discretion-head>div{max-width:680px}.about-page .v15-brand .ab-brand-heading{display:block}.about-page .v15-brand-note{display:block;margin-top:20px}.about-page .v15-cta .ab-cta-grid{grid-template-columns:1fr}}
+@media(max-width:700px){.about-page .v15-hero h1{font-size:clamp(38px,9vw,60px)}.about-page .v15-hero-lead{font-size:18px}.about-page .v15-hero-body{font-size:13px}.about-page .v15-idea h2,.about-page .v15-values .ab-values-heading,.about-page .v15-personal h2,.about-page .v15-brand .ab-brand-heading h2,.about-page .v15-discretion h2,.about-page .v15-cta h2{font-size:clamp(38px,8.8vw,59px)}.about-page .v15-idea-quote{grid-template-columns:39px 1fr;gap:12px}.about-page .v15-idea-quote>span{font-size:70px}.about-page .v15-idea-quote p{font-size:clamp(23px,5.6vw,33px)}.about-page .v15-values .ab-value{grid-template-columns:32px minmax(0,1fr);gap:17px}.about-page .v15-values .ab-value-content{grid-column:2;padding-top:0}.about-page .v15-values .ab-value h3{font-size:clamp(28px,7vw,40px)}.about-page .v15-personal .ab-personal-visual{min-height:430px;padding:80px 17px 65px}.about-page .v15-personal h2{margin-top:30px}.about-page .v15-brand .ab-brand-heading{margin-bottom:35px}.about-page .v15-brand-diagram .ab-brand-main>span{font-size:clamp(38px,9vw,70px)}.about-page .v15-brand-diagram .ab-brand-sub{min-height:300px}.about-page .v15-brand-diagram .ab-brand-sub strong{font-size:clamp(25px,6vw,40px)}.about-page .v15-discretion-grid{grid-template-columns:1fr}.about-page .v15-discretion-grid article,.about-page .v15-discretion-grid article:nth-child(even){padding:29px 0}.about-page .v15-discretion-head{margin-bottom:39px}.about-page .v15-discretion-grid h3{font-size:27px}.about-page .v15-personal .ab-personal-visual .ab-photo-caption{font-size:8px}.about-page .v15-scenario-card blockquote{font-size:25px}}
+@media(max-width:390px){.about-page .v15-hero h1{font-size:clamp(34px,9vw,39px)}.about-page .v15-hero .ab-hero-grid{padding-top:127px}.about-page .v15-idea h2,.about-page .v15-values .ab-values-heading,.about-page .v15-personal h2,.about-page .v15-brand .ab-brand-heading h2,.about-page .v15-discretion h2,.about-page .v15-cta h2{font-size:clamp(33px,8.4vw,40px)}.about-page .v15-scenario-card blockquote{font-size:21px}.about-page .v15-stage-brand span{font-size:20px}.about-page .v15-stage-brand small{font-size:8px}}
+@media(prefers-reduced-motion:reduce){.about-page .v15-hero *{scroll-behavior:auto}}

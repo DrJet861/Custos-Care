@@ -1,0 +1,91 @@
+/* V9: CUSTOS About. All rules are scoped to .about-page; V5–V8 stay unchanged. */
+.about-page{--ab-ink:#171B1D;--ab-warm:#F5F2EC;--ab-sand:#A79882;overflow-x:clip}
+.about-page .ab-hero,.about-page .ab-personal,.about-page .ab-cta{color:var(--ab-warm)}
+.about-page .ab-hero{position:relative;background:linear-gradient(120deg,#171B1D 0%,#22292B 52%,#323B3C 100%);overflow:hidden}
+.about-page .ab-hero-grid{display:grid;grid-template-columns:1fr .84fr;gap:clamp(40px,6vw,110px);align-items:center;min-height:780px;padding-top:160px;padding-bottom:100px}
+.about-page .ab-kicker{font-size:10px;letter-spacing:.23em;color:#BBA98E;display:flex;align-items:center;gap:13px;font-weight:600;text-transform:uppercase}
+.about-page .ab-kicker>span{width:24px;height:1px;background:var(--ab-sand)}
+.about-page .ab-issue{margin:44px 0 23px;font-size:9px;letter-spacing:.22em;color:#96A2A0}
+.about-page .ab-hero h1{font-size:clamp(53px,5.55vw,91px);font-weight:500;letter-spacing:-.063em;line-height:1.035;margin:0;max-width:800px}
+.about-page .ab-hero h1 em,.about-page .ab-personal h2 em,.about-page .ab-cta h2 em{font-style:normal;color:#B7BCBA;font-weight:300}
+.about-page .ab-hairline{height:1px;width:44px;background:var(--ab-sand);margin:40px 0 26px}
+.about-page .ab-lines{display:flex;flex-direction:column;gap:11px;max-width:405px}
+.about-page .ab-lines i{display:block;width:100%;height:4px;background:#A3ABA7;opacity:.54}
+.about-page .ab-lines i:nth-child(2){width:85%}.about-page .ab-lines i:nth-child(3){width:64%}.about-page .ab-lines i:nth-child(4){width:77%}
+.about-page .ab-lines-light i{background:#B2BAB4;opacity:.50}
+.about-page .ab-hero-link{display:inline-flex;margin-top:41px;color:#ECEAE4;border-bottom:1px solid #A79882;align-items:center;gap:60px;padding-bottom:13px;font-size:12px;font-weight:600;transition:color .2s,gap .2s}
+.about-page .ab-hero-link:hover{gap:68px;color:#D5C6B0}
+.about-page .ab-hero-link span{font-size:18px;font-weight:300}
+.about-page .ab-hero-stage{min-height:525px;height:100%;position:relative;background:radial-gradient(circle at 63% 38%,#515653 0%,#2B3434 39%,#1A2123 74%),linear-gradient(45deg,#1F292B,#424642);overflow:hidden;border:1px solid rgba(232,229,219,.14)}
+.about-page .ab-stage-index,.about-page .ab-stage-note{position:absolute;font-size:9px;letter-spacing:.15em;color:#BBBAB1;z-index:3}
+.about-page .ab-stage-index{left:27px;top:29px}.about-page .ab-stage-note{right:27px;bottom:27px}
+.about-page .ab-stage-contour{position:absolute;width:105%;aspect-ratio:1;left:20%;top:-24%;border-radius:50%;border:1px solid rgba(222,221,201,.22);box-shadow:0 0 0 60px rgba(218,214,194,.025),0 0 0 130px rgba(218,214,194,.018),0 0 0 200px rgba(218,214,194,.012)}
+.about-page .ab-stage-circle{position:absolute;width:38%;aspect-ratio:1;left:29%;top:22%;border:1px solid rgba(229,216,194,.16);border-radius:50%;background:radial-gradient(circle at 30% 30%,rgba(195,183,166,.13),rgba(25,30,31,.1) 70%)}
+.about-page .ab-stage-line{position:absolute;top:62%;left:-10%;width:115%;height:1px;transform:rotate(-22deg);background:linear-gradient(90deg,transparent,rgba(228,219,200,.68),transparent)}
+.about-page .ab-stage-matte{position:absolute;inset:30% 20% 23% 30%;border:1px solid rgba(230,222,208,.20);background:linear-gradient(135deg,rgba(31,36,38,.28),rgba(131,129,114,.09));display:flex;align-items:center;justify-content:center;transform:rotate(-8deg)}
+.about-page .ab-stage-matte span{font-size:12px;letter-spacing:.3em;color:#D1CDC2;font-weight:300;line-height:1.9;text-align:center;transform:rotate(8deg)}
+.about-page .ab-hero-foot{display:flex;align-items:center;justify-content:space-between;gap:20px;padding-bottom:30px;font-size:9px;letter-spacing:.18em;color:#BBC1BB}
+.about-page .ab-statement{background:#F5F2EC;padding:clamp(105px,10vw,166px) 0 clamp(80px,8vw,140px)}
+.about-page .ab-section-index{display:flex;justify-content:space-between;gap:25px;color:#93816A;letter-spacing:.17em;text-transform:uppercase;font-size:10px;font-weight:600}
+.about-page .ab-section-index>span:last-child{font-weight:400;color:#92958F}
+.about-page .ab-statement-grid{display:grid;grid-template-columns:1.23fr .65fr;gap:clamp(50px,8vw,150px);align-items:end;margin-top:52px}
+.about-page h2{font-weight:500;line-height:1.055;letter-spacing:-.064em}
+.about-page .ab-statement h2{font-size:clamp(58px,6vw,97px);margin:0}
+.about-page .ab-statement h2 em,.about-page .ab-values h2 em,.about-page .ab-brand h2 em{font-style:normal;color:#898E89;font-weight:300}
+.about-page .ab-statement-aside{padding-bottom:13px}
+.about-page .ab-aside-count{font-size:10px;letter-spacing:.14em;color:#8C806E;display:block;margin-bottom:30px}
+.about-page .ab-design-status{font-size:9px;color:#97978D;letter-spacing:.16em;margin:30px 0 0}
+.about-page .ab-statement-rule{height:1px;background:#C7C5BC;margin-top:95px}
+.about-page .ab-values{background:#E9E6DF;padding:clamp(100px,9vw,145px) 0 clamp(115px,10vw,160px)}
+.about-page .ab-values-heading{font-size:clamp(53px,5.55vw,90px);margin:48px 0 71px}
+.about-page .ab-values-list{border-top:1px solid #BFC0B8}
+.about-page .ab-value{display:grid;grid-template-columns:70px minmax(0,1fr) minmax(180px,.8fr);gap:clamp(16px,3vw,55px);align-items:start;border-bottom:1px solid #BFC0B8;padding:40px 0 48px}
+.about-page .ab-value-id{color:#9D8667;font-size:13px;letter-spacing:.1em;padding-top:7px}
+.about-page .ab-value h3{margin:0;font-weight:500;font-size:clamp(35px,4vw,62px);letter-spacing:-.065em;line-height:1.1;display:flex;align-items:start;justify-content:space-between;gap:16px}
+.about-page .ab-value-arrow{font-size:23px;color:#9A8A74;font-weight:300;line-height:1.8}
+.about-page .ab-value-content{padding-top:12px}
+.about-page .ab-value-content .ab-lines{max-width:315px}
+.about-page .ab-value-content .ab-lines i{height:3px;background:#88918B}
+.about-page .ab-value-tag{display:block;font-size:9px;color:#8B806F;letter-spacing:.13em;margin-top:27px}
+.about-page .ab-personal{background:#1D2426;padding:clamp(100px,9vw,150px) 0;overflow:hidden}
+.about-page .ab-personal-grid{display:grid;grid-template-columns:1fr .9fr;gap:clamp(55px,8vw,150px);align-items:center}
+.about-page .ab-personal-visual{min-height:595px;position:relative;background:linear-gradient(151deg,#364041,#232D2E 55%,#65716C 145%);border:1px solid rgba(239,236,226,.15);overflow:hidden}
+.about-page .ab-visual-label,.about-page .ab-photo-caption{position:absolute;z-index:3;color:#C3C1B8;letter-spacing:.17em;font-size:9px}
+.about-page .ab-visual-label{top:27px;left:26px}.about-page .ab-photo-caption{bottom:28px;left:26px}
+.about-page .ab-photo-window{position:absolute;inset:17% 12% 16%;border:1px solid rgba(230,225,209,.20);background:linear-gradient(125deg,rgba(32,43,43,.38),rgba(162,163,143,.10));overflow:hidden}
+.about-page .ab-photo-orbit{position:absolute;border:1px solid rgba(211,205,187,.36);width:118%;aspect-ratio:1;border-radius:50%;top:-33%;right:-38%;box-shadow:0 0 0 65px rgba(215,207,190,.025),0 0 0 140px rgba(215,207,190,.017)}
+.about-page .ab-photo-trace{width:130%;height:1px;background:rgba(226,214,192,.46);transform:rotate(-29deg);position:absolute;top:56%;left:-20%}
+.about-page .ab-personal-index{color:#B6A48C}
+.about-page .ab-personal h2{font-size:clamp(54px,5.5vw,91px);margin:55px 0 0}
+.about-page .ab-tiny-rule{width:47px;background:#B4A287;height:1px;margin:38px 0}
+.about-page .ab-personal-footnote{color:#A3AEAA;font-size:9px;letter-spacing:.12em;line-height:1.75;margin-top:36px;max-width:365px}
+.about-page .ab-brand{background:#F5F2EC;padding:clamp(105px,10vw,165px) 0 clamp(115px,11vw,185px)}
+.about-page .ab-brand-heading{display:flex;justify-content:space-between;align-items:end;gap:60px;margin:46px 0 70px}
+.about-page .ab-brand-heading h2{font-size:clamp(58px,6vw,98px);margin:0}
+.about-page .ab-brand-heading .ab-lines{width:230px;margin-bottom:10px;flex-shrink:0}
+.about-page .ab-brand-diagram{border:1px solid #C8C8BE;padding:clamp(31px,5vw,68px);background:linear-gradient(145deg,#F4F2ED,#EBE9E3)}
+.about-page .ab-brand-main{display:flex;justify-content:space-between;align-items:end;gap:10px}
+.about-page .ab-brand-main>span{font-size:clamp(50px,7.5vw,118px);line-height:1;letter-spacing:.185em;font-weight:600;color:#222729}
+.about-page .ab-brand-main small{color:#9A886E;font-size:9px;letter-spacing:.12em;white-space:nowrap;padding-bottom:12px}
+.about-page .ab-brand-branch{height:70px;position:relative;border-left:1px solid #B4A48E;margin-left:50%}
+.about-page .ab-brand-branch:after{content:"";position:absolute;left:-50%;width:100%;height:1px;background:#B4A48E;bottom:0}
+.about-page .ab-brand-subs{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.about-page .ab-brand-sub{display:flex;flex-direction:column;min-height:270px;padding:30px;justify-content:space-between;border:1px solid #C4C2B9;transition:background .2s,transform .2s;background:rgba(255,255,255,.22)}
+.about-page .ab-brand-sub:hover{background:#E1DED5;transform:translateY(-3px)}
+.about-page .ab-brand-sub-index{color:#92816A;font-size:10px;letter-spacing:.15em}
+.about-page .ab-brand-sub strong{font-size:clamp(33px,4vw,61px);font-weight:500;letter-spacing:-.045em;line-height:1.2}
+.about-page .ab-brand-sub-end{display:flex;justify-content:space-between;align-items:center;padding-top:15px;border-top:1px solid #BCB9B0;color:#666D6A;font-size:11px}
+.about-page .ab-brand-sub-end span{font-size:19px}
+.about-page .ab-cta{background:linear-gradient(110deg,#171D1F,#2C3435);padding:clamp(100px,10vw,155px) 0}
+.about-page .ab-cta-grid{display:grid;grid-template-columns:1.28fr .63fr;gap:clamp(50px,8vw,160px);align-items:end}
+.about-page .ab-cta h2{font-size:clamp(49px,5.4vw,85px);margin:43px 0 0}
+.about-page .ab-cta-right>.ab-lines{margin-bottom:35px}
+.about-page .ab-cta-link{display:flex;align-items:center;justify-content:space-between;padding:22px 26px;background:#F5F2EC;color:#171B1D;font-weight:600;font-size:12px;transition:background .2s,transform .2s;gap:16px}
+.about-page .ab-cta-link:hover{background:#E0DACE;transform:translateY(-2px)}
+.about-page .ab-cta-link span{font-size:21px;font-weight:300}
+.about-page .ab-cta-right small{color:#A1ABA6;letter-spacing:.12em;font-size:9px;display:block;margin-top:20px}
+@media(max-width:1100px){.about-page .ab-hero-grid{grid-template-columns:1fr .78fr;gap:35px}.about-page .ab-hero h1{font-size:clamp(47px,5.5vw,75px)}.about-page .ab-personal-grid{gap:50px}.about-page .ab-personal h2{font-size:clamp(47px,5.3vw,75px)}.about-page .ab-brand-main>span{font-size:clamp(48px,7vw,85px)}}
+@media(max-width:920px){.about-page .ab-hero-grid{grid-template-columns:1fr;min-height:unset;gap:44px;padding-top:155px;padding-bottom:70px}.about-page .ab-hero h1{font-size:clamp(56px,8vw,87px)}.about-page .ab-hero-stage{min-height:420px;height:420px}.about-page .ab-statement-grid,.about-page .ab-personal-grid,.about-page .ab-cta-grid{grid-template-columns:1fr;gap:55px}.about-page .ab-statement h2{font-size:clamp(57px,8vw,92px)}.about-page .ab-statement-aside{max-width:450px}.about-page .ab-personal-visual{min-height:455px}.about-page .ab-personal-copy{max-width:750px}.about-page .ab-brand-heading{align-items:start}.about-page .ab-brand-main>span{font-size:clamp(55px,8vw,90px)}.about-page .ab-cta-right{max-width:510px}}
+@media(max-width:700px){.about-page .ab-hero-grid{padding-top:135px;padding-bottom:62px}.about-page .ab-hero h1{font-size:clamp(45px,10vw,72px)}.about-page .ab-hero-stage{min-height:330px;height:330px}.about-page .ab-hero-foot{font-size:8px}.about-page .ab-statement,.about-page .ab-values,.about-page .ab-personal,.about-page .ab-brand,.about-page .ab-cta{padding-top:95px;padding-bottom:100px}.about-page .ab-statement h2,.about-page .ab-values h2,.about-page .ab-personal h2,.about-page .ab-brand h2,.about-page .ab-cta h2{font-size:clamp(46px,10vw,69px)}.about-page .ab-section-index{font-size:9px}.about-page .ab-section-index>span:last-child{display:none}.about-page .ab-statement-grid{margin-top:44px}.about-page .ab-statement-rule{margin-top:64px}.about-page .ab-values-heading{margin:40px 0 50px}.about-page .ab-value{grid-template-columns:35px 1fr;gap:20px;padding:31px 0 40px}.about-page .ab-value-content{grid-column:2}.about-page .ab-value h3{font-size:clamp(31px,7.5vw,49px)}.about-page .ab-personal-visual{min-height:370px}.about-page .ab-personal h2{margin-top:35px}.about-page .ab-brand-heading{display:block}.about-page .ab-brand-heading .ab-lines{margin-top:38px}.about-page .ab-brand-diagram{padding:24px}.about-page .ab-brand-main{display:block}.about-page .ab-brand-main>span{font-size:clamp(40px,9.5vw,72px);letter-spacing:.12em}.about-page .ab-brand-main small{display:block;padding:15px 0 0}.about-page .ab-brand-branch{height:47px}.about-page .ab-brand-subs{grid-template-columns:1fr;gap:12px}.about-page .ab-brand-sub{min-height:195px;padding:23px}.about-page .ab-brand-sub strong{font-size:clamp(27px,8vw,43px);overflow-wrap:anywhere}.about-page .ab-brand-sub{min-width:0}.about-page .ab-cta-grid{gap:44px}}
+@media(max-width:390px){.about-page .ab-hero h1{font-size:43px}.about-page .ab-hero-stage{height:285px;min-height:285px}.about-page .ab-hero-foot>span:first-child{display:none}.about-page .ab-hero-foot{justify-content:flex-end}.about-page .ab-statement h2,.about-page .ab-values h2,.about-page .ab-personal h2,.about-page .ab-brand h2,.about-page .ab-cta h2{font-size:44px}.about-page .ab-brand-main>span{font-size:39px}}
+@media(prefers-reduced-motion:reduce){.about-page .ab-brand-sub,.about-page .ab-hero-link,.about-page .ab-cta-link{transition:none}}

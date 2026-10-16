@@ -1,0 +1,50 @@
+/* CUSTOS Betreuung – V12: finalised editorial text. Builds on V6 design; page-scoped only. */
+.care-page{overflow-x:clip}
+.care-hero h1{font-size:clamp(34px,5.15vw,79px);letter-spacing:-.065em;line-height:1.03;max-width:850px;overflow-wrap:normal}
+.care-hero-copy{max-width:min(780px,85vw)}
+.care-hero-text{max-width:485px;color:#C4CBC6;line-height:1.72;font-size:14px;position:relative}
+.care-hero-text p{margin:0 0 10px}
+.care-hero-text .care-hero-lead{font-size:17px;color:#F2F0EB;font-weight:500;line-height:1.45}
+.care-hero-actions{margin-top:29px}
+.care-intro h2{font-size:clamp(39px,4.3vw,70px);overflow-wrap:normal}
+.care-editorial-copy{color:#555E5B;max-width:570px;font-size:15px;line-height:1.84}
+.care-editorial-copy p{margin:0 0 16px}
+.care-editorial-copy strong{font-weight:600;color:#252C2C}
+.care-service-content{padding-top:85px;padding-bottom:85px}
+.care-service h2{margin:21px 0 28px}
+.care-service-intro h3{font-size:clamp(21px,2.1vw,30px);letter-spacing:-.042em;font-weight:450;margin:0 0 16px;line-height:1.2}
+.care-service-intro p{font-size:14px;line-height:1.8;color:#525C58;margin:0;max-width:510px}
+.care-service-benefits{margin-top:28px;border-top:1px solid #C7C2B8}
+.care-service-benefits>div{border-bottom:1px solid #C7C2B8;padding:14px 0 15px}
+.care-service-benefits strong{font-size:14px;font-weight:600;letter-spacing:-.012em;color:#2F3534}
+.care-service-benefits p{font-size:12px;line-height:1.66;color:#656D68;margin:6px 0 0}
+.care-service-note{font-size:11px;letter-spacing:0;line-height:1.65;margin-top:18px}
+.care-concierge-content{padding-top:120px;padding-bottom:105px;min-height:770px}
+.care-concierge h2{font-size:clamp(66px,8vw,130px);margin-bottom:20px}
+.care-concierge-intro{max-width:650px}
+.care-concierge-intro h3{color:#F0EDE7;font-size:clamp(19px,2.3vw,29px);line-height:1.3;font-weight:400;margin:0 0 15px}
+.care-concierge-intro p{font-size:14px;color:#C1C5C0;max-width:580px;line-height:1.78;margin:0}
+.care-concierge-services{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;width:100%;max-width:1110px;margin-top:37px}
+.care-concierge-services article{padding:22px;background:rgba(23,27,29,.73);border:1px solid rgba(245,242,236,.20);backdrop-filter:blur(3px)}
+.care-concierge-services span{font-size:10px;letter-spacing:.12em;color:#BFAA8E}
+.care-concierge-services h4{font-size:19px;font-weight:500;letter-spacing:-.035em;margin:16px 0 10px;color:#F5F2EC}
+.care-concierge-services p{font-size:12px;line-height:1.73;color:#C2C7C2;margin:0}
+.care-concierge-note{max-width:930px;color:#B7BDB8;font-size:12px;line-height:1.75;margin:20px 0 0}
+.care-detail-head h2{font-size:clamp(43px,4.6vw,73px)}
+.care-detail-grid h3{min-height:55px;margin-bottom:16px}
+.care-detail-grid article>p{color:#5A635D;font-size:13px;line-height:1.74;margin:0}
+.care-everyday-example{margin-top:37px;padding:25px 30px;background:#E9E5DD;border-left:2px solid #A79882}
+.care-everyday-example span{color:#8C7B65;letter-spacing:.12em;font-size:10px;font-weight:600}
+.care-everyday-example p{font-size:14px;line-height:1.8;color:#4D5653;margin:10px 0 0;max-width:940px}
+.care-membership-bridge h2{font-size:clamp(43px,4.9vw,78px)}
+.care-bridge-right>p{font-size:14px;max-width:530px}
+.care-tier-name{display:flex;flex-direction:column;gap:6px}
+.care-tier-name small{font-size:11px;color:#66706B;line-height:1.6;font-weight:400;max-width:305px}
+.care-mini-tiers>div{padding:17px 0}
+.care-mini-tiers>div>span{flex:none;white-space:nowrap}
+.care-end h2{font-size:clamp(50px,6.5vw,100px)}
+.care-end-copy{color:#CDD0CB;max-width:650px;font-size:15px;line-height:1.8;margin:-7px 0 30px}
+.care-end-region{font-size:10px;letter-spacing:.12em;color:#AFAEA8;margin-top:24px}
+@media(max-width:1023px){.care-hero h1{font-size:clamp(36px,6.5vw,76px)}.care-hero-copy{max-width:95%}.care-intro h2{font-size:clamp(37px,5vw,65px)}.care-concierge-services{gap:10px}.care-concierge-services article{padding:16px}}
+@media(max-width:760px){.care-hero{min-height:790px;height:auto}.care-hero-container{min-height:790px;padding-top:275px;padding-bottom:120px}.care-hero h1{font-size:clamp(31px,7.8vw,59px)}.care-hero-text{max-width:520px}.care-intro h2{font-size:clamp(34px,7.3vw,58px)}.care-concierge-content{min-height:0}.care-concierge-services{grid-template-columns:1fr;max-width:640px;gap:8px}.care-concierge-services article{padding:17px 19px}.care-concierge-services h4{margin:9px 0 5px}.care-concierge-services p{font-size:12px}.care-concierge-note{font-size:11px}.care-detail-head h2{font-size:clamp(39px,8.5vw,67px)}.care-membership-bridge h2{font-size:clamp(39px,8vw,62px)}.care-service-content{padding-top:62px;padding-bottom:65px}.care-service-intro p{font-size:14px}}
+@media(max-width:480px){.care-hero{min-height:760px}.care-hero-container{min-height:760px;padding-top:235px;padding-bottom:113px}.care-hero h1{font-size:clamp(28px,7.55vw,36px);letter-spacing:-.065em}.care-hero-lead{font-size:15px!important}.care-hero-text{font-size:13px}.care-intro h2{font-size:clamp(31px,7.65vw,40px)}.care-concierge h2{font-size:clamp(56px,13.3vw,74px)}.care-concierge-content{padding-top:110px;padding-bottom:85px}.care-concierge-intro p{font-size:13px}.care-mini-tiers>div{align-items:flex-start}.care-mini-tiers>div>span{font-size:11px;padding-top:5px}.care-end h2{font-size:clamp(43px,10.5vw,59px)}.care-end-region{font-size:9px;line-height:1.9}.care-everyday-example{padding:22px 18px}}
