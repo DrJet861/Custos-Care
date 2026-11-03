@@ -103,3 +103,29 @@
 /* Schmale Smartphones: lange deutsche Überschriften dürfen den Kontaktbereich nicht verbreitern. */
 @media(max-width:850px){.contact-inner{grid-template-columns:minmax(0,1fr)}.contact-intro{min-width:0}}
 @media(max-width:380px){.contact-head{font-size:33px;overflow-wrap:anywhere}}
+
+/* CUSTOS / freigegebenes Hero-Motiv – Startseite */
+.hero-photo{
+  pointer-events:none;position:absolute;z-index:2;
+  top:var(--header);bottom:0;right:0;width:min(74vw,1200px);
+  background-image:url('../Media/custos-hero.webp');
+  background-repeat:no-repeat;background-size:cover;background-position:55% center;
+  -webkit-mask-image:linear-gradient(to right,transparent 0%,#000 24%);
+  mask-image:linear-gradient(to right,transparent 0%,#000 24%);
+}
+.hero::before{
+  background:linear-gradient(90deg,rgba(9,13,15,.78) 0%,rgba(9,13,15,.57) 35%,rgba(9,13,15,.22) 71%,rgba(9,13,15,.12) 100%);
+}
+@media(max-width:1023px){
+ .hero-photo{top:calc(var(--header) + 35px);bottom:auto;right:-3%;width:106%;height:48%;background-size:cover;background-position:center 53%;opacity:.93;-webkit-mask-image:linear-gradient(to bottom,#000 0%,#000 55%,transparent 100%);mask-image:linear-gradient(to bottom,#000 0%,#000 55%,transparent 100%)}
+ .hero::before{background:linear-gradient(to bottom,rgba(10,14,17,.12) 0%,rgba(10,14,17,.08) 28%,rgba(10,14,17,.92) 67%,#131719 100%)}
+}
+@media(max-width:620px){
+ .hero-photo{top:calc(var(--header) + 46px);right:-10%;width:120%;height:290px;background-position:center 50%;background-size:cover;opacity:.93}
+ .hero::before{background:linear-gradient(to bottom,rgba(10,14,17,.02) 0%,rgba(10,14,17,.13) 29%,rgba(10,14,17,.72) 45%,#131719 57%,#131719 100%)}
+}
+
+@media(max-width:370px){
+ .hero{min-height:max(850px,100svh)}
+ .hero-photo{top:calc(var(--header) + 22px);height:235px;right:-9%;width:118%}
+}
