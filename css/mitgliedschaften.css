@@ -51,28 +51,55 @@
 @media(max-width:390px){.mp-hero h1{font-size:47px}.mp-art-bottom{left:22px;right:22px}.mp-tier .tier-price{font-size:37px}}
 @media(prefers-reduced-motion:reduce){.mp-final-action,.mp-hero-link{transition:none}}
 
-/* CUSTOS Mitgliedschaften - breites Hero-Bild */
-
-.v13-hero .mp-hero-grid {
-    grid-template-columns: minmax(0, 0.94fr) minmax(0, 1.16fr);
-    gap: clamp(20px, 3vw, 46px);
+/* CUSTOS Bild 9 - Hero im Originalformat, ohne Beschnitt.
+   Die hohe Spezifitaet ist bewusst gewaehlt, weil
+   mitgliedschaften-content.css erst danach geladen wird. */
+.membership-page .v13-hero .mp-hero-grid {
+  grid-template-columns: minmax(0, .88fr) minmax(0, 1.2fr);
+  gap: clamp(18px, 2.1vw, 32px);
 }
 
-.v13-hero .mp-hero-art {
-    width: 100%;
-    height: auto;
-    aspect-ratio: 16 / 10;
-    overflow: hidden;
-    border: none;
+.membership-page .v13-hero .mp-hero-copy h1 {
+  font-size: clamp(44px, 4.5vw, 74px);
 }
 
-    .v13-hero .mp-hero-art::before {
-        display: none;
-    }
+.membership-page .v13-hero .mp-hero-art {
+  position: relative;
+  display: block;
+  width: 100%;
+  max-width: none;
+  height: auto;
+  min-height: 0;
+  aspect-ratio: 1672 / 941;
+  overflow: hidden;
+  border: 0;
+}
 
-/* Smartphone und Tablet */
+.membership-page .v13-hero .mp-hero-art::before {
+  display: none;
+}
+
+.membership-page .v13-hero .mp-hero-art > img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+}
+
 @media (max-width: 880px) {
-    .v13-hero .mp-hero-grid {
-        grid-template-columns: 1fr;
-    }
+  .membership-page .v13-hero .mp-hero-grid {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 36px;
+  }
+  .membership-page .v13-hero .mp-hero-copy h1 {
+    font-size: clamp(40px, 7vw, 64px);
+  }
+}
+
+@media (max-width: 430px) {
+  .membership-page .v13-hero .mp-hero-copy h1 {
+    font-size: clamp(36px, 9.6vw, 45px);
+  }
 }
