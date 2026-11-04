@@ -143,3 +143,64 @@
 .custos-more-photos summary{cursor:pointer;font-size:.86rem;line-height:1.45;font-weight:600}
 .custos-more-photos .custos-extra-photo-label{display:block;padding-top:10px;font-size:.8rem;line-height:1.4}
 .custos-more-photos .custos-extra-photo-label input{margin-top:5px}
+
+
+/* Bild 10: Protection-Hero mit echter Breite und ohne abgeschnittene Rolle */
+.protection-page .v14-hero .pr-hero-grid {
+  grid-template-columns: minmax(0, 1fr);
+  position: relative;
+  min-height: 730px;
+}
+.protection-page .v14-hero .pr-hero-copy {
+  position: relative;
+  z-index: 2;
+  width: min(100%, 650px);
+}
+.protection-page .v14-hero .pr-hero-visual {
+  position: absolute;
+  z-index: 0;
+  inset: 0 auto 0 50%;
+  transform: translateX(-50%);
+  width: 100vw;
+  height: 100% !important;
+  border: 0;
+  background-color: #13191b;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: right center;
+  pointer-events: none;
+}
+.protection-page .v14-hero .pr-hero-visual::before {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  inset: 0;
+  background: linear-gradient(90deg,
+    #14191b 0%,
+    rgba(20,25,27,.98) 22%,
+    rgba(20,25,27,.9) 42%,
+    rgba(20,25,27,.42) 63%,
+    rgba(20,25,27,0) 90%);
+}
+.protection-page .v14-hero .pr-hero-visual::after { display: none; }
+.protection-page .v14-hero .pr-hero-bottom { position: relative; z-index: 2; }
+
+@media (max-width: 960px) {
+  .protection-page .v14-hero .pr-hero-grid {
+    grid-template-columns: minmax(0, 1fr);
+    min-height: 0;
+    gap: 32px;
+  }
+  .protection-page .v14-hero .pr-hero-copy { width: 100%; }
+  .protection-page .v14-hero .pr-hero-visual {
+    position: relative;
+    inset: auto;
+    transform: none;
+    width: 100%;
+    height: auto !important;
+    aspect-ratio: 1886 / 834;
+    min-height: 205px;
+    background-position: right center;
+  }
+  .protection-page .v14-hero .pr-hero-visual::before { display: none; }
+}
