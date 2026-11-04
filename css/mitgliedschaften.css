@@ -50,3 +50,29 @@
 @media(max-width:720px){.mp-hero-grid{padding-top:135px}.mp-hero h1{font-size:clamp(51px,10vw,77px)}.mp-hero-art{height:285px}.mp-intro{padding:94px 0}.mp-intro h2,.mp-comparison h2,.mp-principles h2{font-size:clamp(43px,10vw,66px)}.mp-memberships{padding:92px 0 104px}.mp-table{border-top:0}.mp-table-header{display:none}.mp-table-group{padding:35px 0 19px}.mp-table-row{grid-template-columns:repeat(3,minmax(0,1fr));min-height:unset;border-bottom:1px solid #C8C8C0;padding:14px 0 18px}.mp-table-row>div.mp-field{grid-column:1/-1;padding:0 0 17px;font-size:14px}.mp-table-row>div.mp-field span{margin-top:3px}.mp-table-row>div:not(.mp-field){border-left:0;border-right:1px solid #C9C9C1;padding:26px 5px 6px;min-width:0;font-size:11px;position:relative;word-break:normal}.mp-table-row>div:last-child{border-right:0}.mp-table-row>div[data-tier]:before{content:attr(data-tier);position:absolute;top:4px;left:0;right:0;font-size:9px;letter-spacing:.12em;color:#8E7D65;font-weight:700}.mp-principle-grid{grid-template-columns:1fr;gap:28px}.mp-principles h2{margin-bottom:58px}.mp-principle{padding-bottom:22px}.mp-principle h3{margin:24px 0}.mp-ending h2{font-size:clamp(43px,10vw,65px)}}
 @media(max-width:390px){.mp-hero h1{font-size:47px}.mp-art-bottom{left:22px;right:22px}.mp-tier .tier-price{font-size:37px}}
 @media(prefers-reduced-motion:reduce){.mp-final-action,.mp-hero-link{transition:none}}
+
+/* CUSTOS Mitgliedschaften - breites Hero-Bild */
+
+.v13-hero .mp-hero-grid {
+    grid-template-columns: minmax(0, 0.94fr) minmax(0, 1.16fr);
+    gap: clamp(20px, 3vw, 46px);
+}
+
+.v13-hero .mp-hero-art {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16 / 10;
+    overflow: hidden;
+    border: none;
+}
+
+    .v13-hero .mp-hero-art::before {
+        display: none;
+    }
+
+/* Smartphone und Tablet */
+@media (max-width: 880px) {
+    .v13-hero .mp-hero-grid {
+        grid-template-columns: 1fr;
+    }
+}
