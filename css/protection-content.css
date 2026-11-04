@@ -199,8 +199,9 @@
     width: 100%;
     height: auto !important;
     aspect-ratio: 1886 / 834;
-    min-height: 205px;
-    background-position: right center;
+    min-height: 0;
+    background-size: contain;
+    background-position: center center;
   }
   .protection-page .v14-hero .pr-hero-visual::before { display: none; }
 }
