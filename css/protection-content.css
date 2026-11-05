@@ -416,3 +416,92 @@
     max-height: 345px;
   }
 }
+
+
+/* 04 / Water Beading: nachtblaues Lackmotiv mit echtem HTML-Text.
+   Die Bilddatei enthält bewusst keine eingebrannte Typografie. */
+.protection-page .v14-material .v14-water-art--photo {
+  background: #101d28 url('../Media/custos-water-beading-nachtblau.webp') center center / cover no-repeat;
+  isolation: isolate;
+  overflow: hidden;
+}
+.protection-page .v14-material .v14-water-art--photo::before {
+  z-index: 2;
+  inset: 12px;
+  border-color: rgba(245,242,236,.21);
+}
+.protection-page .v14-material .v14-water-art--photo::after {
+  z-index: 1;
+  background: linear-gradient(180deg,
+    rgba(5,13,20,.54) 0%,
+    rgba(5,13,20,.08) 34%,
+    rgba(5,13,20,.16) 53%,
+    rgba(5,13,20,.82) 100%);
+}
+.protection-page .v14-material .v14-water-art--photo .v14-water-top {
+  z-index: 3;
+  top: 30px;
+  left: 29px;
+  right: 25px;
+  color: #f2f3ef;
+  font-size: 9px;
+  text-shadow: 0 1px 8px rgba(0,0,0,.55);
+}
+.protection-page .v14-material .v14-water-art--photo .v14-water-label {
+  z-index: 3;
+  left: 29px;
+  right: 29px;
+  bottom: 35px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 15px;
+}
+.protection-page .v14-material .v14-water-art--photo .v14-water-label strong {
+  min-width: 0;
+  font-size: clamp(37px,3.65vw,57px);
+  line-height: .98;
+  letter-spacing: -.065em;
+  text-shadow: 0 2px 12px rgba(0,0,0,.50);
+}
+.protection-page .v14-material .v14-water-art--photo .v14-water-label span {
+  flex: 0 1 146px;
+  color: #edf0ed;
+  font-size: 10px;
+  line-height: 1.65;
+  text-shadow: 0 1px 8px rgba(0,0,0,.6);
+}
+@media (max-width: 700px) {
+  .protection-page .v14-material .v14-water-art--photo {
+    min-height: 460px;
+  }
+  .protection-page .v14-material .v14-water-art--photo .v14-water-top {
+    left: 24px;
+    right: 24px;
+    top: 25px;
+  }
+  .protection-page .v14-material .v14-water-art--photo .v14-water-label {
+    left: 24px;
+    right: 24px;
+    bottom: 28px;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 14px;
+  }
+  .protection-page .v14-material .v14-water-art--photo .v14-water-label strong {
+    font-size: clamp(35px,8.2vw,53px);
+  }
+  .protection-page .v14-material .v14-water-art--photo .v14-water-label span {
+    flex: 0 0 auto;
+    max-width: 250px;
+    font-size: 11px;
+  }
+}
+@media (max-width: 440px) {
+  .protection-page .v14-material .v14-water-art--photo {
+    min-height: 400px;
+  }
+  .protection-page .v14-material .v14-water-art--photo .v14-water-label strong {
+    font-size: clamp(34px,9.1vw,43px);
+  }
+}
