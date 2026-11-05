@@ -144,3 +144,23 @@
  .ct-page .v16-choose-head h2,.ct-page .v16-process-heading h2{font-size:clamp(36px,8.5vw,47px)}
 }
 @media(prefers-reduced-motion:reduce){.ct-page .v16-btn,.ct-page .v16-choice{transition:none!important}}
+
+/* Kontakt-Hero: originale geometrische Grafik durch Mercedes-Detail ersetzen. */
+.ct-page .v16-hero .ct-issue{margin-top:22px;margin-bottom:27px}
+.ct-page .v16-hero-art{background:#171e21;isolation:isolate}
+.ct-page .v16-hero-art .ct-hero-photo{
+ position:absolute;inset:0;width:100%;height:100%;display:block;
+ object-fit:cover;object-position:center center;z-index:0;
+}
+.ct-page .v16-hero-art::before{display:none}
+.ct-page .v16-hero-art::after{
+ content:"";display:block;position:absolute;inset:0;left:0;top:0;width:auto;height:auto;
+ transform:none;z-index:1;pointer-events:none;
+ background:linear-gradient(180deg,rgba(9,15,17,.45),transparent 24%,transparent 64%,rgba(9,15,17,.61));
+}
+.ct-page .v16-hero-art .ct-art-label,
+.ct-page .v16-hero-art .ct-art-coordinate{z-index:2;color:#f3f1eb;text-shadow:0 1px 5px rgba(0,0,0,.65)}
+@media(max-width:740px){
+ .ct-page .v16-hero .ct-issue{margin-top:19px;margin-bottom:24px}
+ .ct-page .v16-hero-art .ct-hero-photo{object-position:49% 55%}
+}
