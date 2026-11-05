@@ -145,67 +145,95 @@
 .custos-more-photos .custos-extra-photo-label input{margin-top:5px}
 
 
-/* Bild 10: Protection-Hero mit echter Breite und ohne abgeschnittene Rolle */
-.protection-page .v14-hero .pr-hero-grid {
-  grid-template-columns: minmax(0, 1fr);
+/* Hero: durchgehendes Hintergrundbild, inklusive unterer Navigationszeile.
+   Die Bildflaeche ist ein direktes Kind von .pr-hero, NICHT mehr Teil des Grids.
+   So bleibt sie auf Desktop und Mobile hinter dem Text, statt darunter zu rutschen. */
+.protection-page .pr-hero.v14-hero {
   position: relative;
-  min-height: 730px;
+  isolation: isolate;
+  overflow: hidden;
+  background-color: #14191b;
 }
-.protection-page .v14-hero .pr-hero-copy {
-  position: relative;
-  z-index: 2;
-  width: min(100%, 650px);
-}
-.protection-page .v14-hero .pr-hero-visual {
+.protection-page .pr-hero.v14-hero > .pr-hero-visual {
   position: absolute;
   z-index: 0;
-  inset: 0 auto 0 50%;
-  transform: translateX(-50%);
-  width: 100vw;
+  inset: 0;
+  display: block;
+  width: 100%;
   height: 100% !important;
+  min-height: 0;
+  aspect-ratio: auto;
+  transform: none;
   border: 0;
-  background-color: #13191b;
+  background-color: #14191b;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: right center;
   pointer-events: none;
 }
-.protection-page .v14-hero .pr-hero-visual::before {
+.protection-page .pr-hero.v14-hero > .pr-hero-visual::before {
   content: "";
+  display: block;
   position: absolute;
   z-index: 1;
   inset: 0;
   background: linear-gradient(90deg,
     #14191b 0%,
-    rgba(20,25,27,.98) 22%,
-    rgba(20,25,27,.9) 42%,
-    rgba(20,25,27,.42) 63%,
-    rgba(20,25,27,0) 90%);
+    rgba(20,25,27,.98) 21%,
+    rgba(20,25,27,.88) 42%,
+    rgba(20,25,27,.44) 65%,
+    rgba(20,25,27,0) 94%);
 }
-.protection-page .v14-hero .pr-hero-visual::after { display: none; }
-.protection-page .v14-hero .pr-hero-bottom { position: relative; z-index: 2; }
-
+.protection-page .pr-hero.v14-hero > .pr-hero-visual::after {
+  display: none;
+}
+.protection-page .pr-hero.v14-hero > .pr-hero-grid {
+  position: relative;
+  z-index: 2;
+  grid-template-columns: minmax(0, 1fr);
+  min-height: 730px;
+}
+.protection-page .pr-hero.v14-hero .pr-hero-copy {
+  position: relative;
+  z-index: 2;
+  width: min(100%, 650px);
+}
+.protection-page .pr-hero.v14-hero > .pr-hero-bottom {
+  position: relative;
+  z-index: 2;
+  background: transparent;
+}
 @media (max-width: 960px) {
-  .protection-page .v14-hero .pr-hero-grid {
+  .protection-page .pr-hero.v14-hero > .pr-hero-grid {
     grid-template-columns: minmax(0, 1fr);
     min-height: 0;
-    gap: 32px;
+    gap: 0;
   }
-  .protection-page .v14-hero .pr-hero-copy { width: 100%; }
-  .protection-page .v14-hero .pr-hero-visual {
-    position: relative;
-    inset: auto;
-    transform: none;
+  .protection-page .pr-hero.v14-hero .pr-hero-copy {
     width: 100%;
-    height: auto !important;
-    aspect-ratio: 1886 / 834;
-    min-height: 0;
-    background-size: contain;
-    background-position: center center;
   }
-  .protection-page .v14-hero .pr-hero-visual::before { display: none; }
+  .protection-page .pr-hero.v14-hero > .pr-hero-visual {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100% !important;
+    background-size: cover;
+    background-position: 68% center;
+  }
+  /* Staerkerer Kontrast, damit Text und Buttons vor dem Foto lesbar bleiben. */
+  .protection-page .pr-hero.v14-hero > .pr-hero-visual::before {
+    display: block;
+    background: linear-gradient(180deg,
+      rgba(20,25,27,.88) 0%,
+      rgba(20,25,27,.77) 48%,
+      rgba(20,25,27,.70) 100%);
+  }
 }
-
+@media (max-width: 540px) {
+  .protection-page .pr-hero.v14-hero > .pr-hero-visual {
+    background-position: 72% center;
+  }
+}
 
 /* 06 / Galerie: eine echte Aufnahme im bestehenden dreispaltigen Raster. */
 .protection-page .v14-gallery-grid .pr-gallery-frame--photo {
